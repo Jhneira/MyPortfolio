@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --colorPrimario: #fca61c;
+  --colorSecundario: #c57907;
+  --backgroungColor: rgb(21, 21, 21);
+}
+
+@import '@angular/cdk/overlay-prebuilt.css';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--backgroungColor);
+}

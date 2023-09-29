@@ -1,0 +1,97 @@
+.nav-container {
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: var(--backgroungColor);
+}
+
+.logo {
+  grid-column: 1/2;
+  width: 10rem;
+  margin-left: 1rem;
+  align-self: center;
+}
+
+.nav {
+  grid-column: 2/3;
+  justify-self: end;
+  padding-right: 1rem;
+  padding-top: 3rem;
+
+}
+
+.nav-button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 3rem;
+
+}
+
+.options-container {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+  border: solid 0.2rem rgb(14 14 14);
+  padding: 0.8rem;
+  background-color: rgb(21, 21, 21);
+  border-radius: 10%;
+}
+
+.options,
+.close {
+  text-decoration: none;
+  padding: 0.5rem;
+  color: white;
+  font-size: 2rem;
+  font-family: 'Della Respira', serif;
+}
+
+.close {
+  justify-self: end;
+  cursor: pointer;
+}
+
+.nav-desktop {
+  display: none;
+
+}
+
+@media screen and (min-width: 550px) {
+  .nav-container {
+    width: 20%;
+    height: 100vh;
+    grid-template-columns: none;
+    grid-template-rows: 30% auto;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .logo {
+    grid-row: 1/2;
+    align-self: start;
+  }
+
+  .nav-desktop {
+    display: grid;
+    a {
+      padding-left: 2rem;
+    }
+  }
+
+  .options:hover{
+    font-size: 3rem;
+    transition: all 0.5s;
+  }
+
+  .active {
+    color: var(--colorPrimario);
+  }
+
+
+}
+

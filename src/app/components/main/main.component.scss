@@ -1,0 +1,156 @@
+.container {
+  width: 100%;
+
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  perspective: 1500px;
+}
+
+.card {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  margin: 10rem 3rem 5rem 3rem;
+  display: grid;
+  grid-template-rows: 70% 30%;
+  background-color: var(--backgroungColor);
+  clip-path: polygon(100% 0, 100% 70%, 50% 100%, 0 100%, 0 0);
+  border-radius: 15px;
+  -moz-border-radius: 15px 15px 15px 15px;
+  -webkit-border-radius: 15px 15px 15px 15px;
+  border: 6px solid #fca61c;
+  backface-visibility: hidden;
+  transition: all 1s;
+  .welcome {
+    grid-row: 1/2;
+  }
+
+}
+
+
+.hi {
+  color: white;
+  font-family: 'Della Respira', serif;
+  padding-top: 5rem;
+  padding-left: 1.5rem;
+  font-size: 5rem;
+}
+
+.name {
+  color: white;
+  font-family: 'Della Respira', serif;
+  font-size: 5rem;
+}
+
+.job {
+  color: white;
+  font-size: 4rem;
+  font-family: 'Della Respira', serif;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+}
+
+.name span {
+  color: var(--colorPrimario);
+  padding-left: 1.5rem;
+}
+
+.background-card {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  margin: 10rem 3rem 5rem 3rem;
+  background-color: var(--colorPrimario);
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: 90% 10%;
+  transition: all 1s;
+}
+
+
+.front {
+  backface-visibility: hidden;
+}
+
+.about,
+.home {
+  grid-row: 2/3;
+  justify-self: end;
+  margin: 2rem 1rem 2rem 1rem;
+  font-size: 2.7rem;
+  font-family: 'Della Respira', serif;
+  cursor: pointer;
+}
+
+.neira {
+  grid-row: 1/2 ;
+  padding: 5rem 2rem;
+  font-size: 2rem;
+  font-family: 'Della Respira', serif;
+  transform: rotateY(180deg);
+}
+
+
+.home {
+  justify-self: start;
+  transform: rotateY(180deg);
+}
+
+.flipped .card,
+.flipped .background-card {
+  transform: rotateY(180deg);
+}
+
+.socialMedia {
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: 20% 20% auto;
+  a {
+    display: grid;
+  }
+  fa-icon {
+    padding-left: 2rem;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: white;
+    justify-self: center;
+    align-self: end;
+  }
+
+}
+
+@media screen and (min-width: 550px) {
+  .container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+
+  }
+
+  .card-container {
+    grid-column: 2/3;
+    display: grid;
+  }
+
+  .card {
+    width: 40rem;
+    height: 59.5rem;
+    justify-self: center;
+    align-self: center;
+
+  }
+
+  .background-card {
+    width: 40rem;
+    height: 59.5rem;
+    justify-self: center;
+    align-self: center;
+  }
+
+}
+
+

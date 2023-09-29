@@ -1,0 +1,120 @@
+.projects-container{
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  padding-top: 10rem;
+  gap: 2rem;
+}
+
+.card {
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  height: 60rem;
+  margin-bottom: 2rem;
+}
+
+.back-card {
+  display: grid;
+  position: absolute;
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0rem 1rem 1rem 3rem;
+  background-color: var(--colorPrimario);
+  border-radius: 15px;
+  a {
+    text-decoration: none;
+    align-self: end;
+    justify-self: end;
+    font-size: 2.7rem;
+    font-family: 'Della Respira', serif;
+    color: black;
+  }
+
+}
+
+.front-card {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  background-color: var(--backgroungColor);
+  clip-path: polygon(100% 0, 100% 70%, 50% 100%, 0 100%, 0 0);
+  border-radius: 15px;
+  -moz-border-radius: 15px 15px 15px 15px;
+  -webkit-border-radius: 15px 15px 15px 15px;
+  border: 6px solid #fca61c;
+  padding: 0rem 1rem 5rem 1rem;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: 10% auto;
+  overflow: hidden;
+  h1 {
+    font-size: 2.5rem;
+    font-family: 'Della Respira', serif;
+    color: white;
+    justify-self: center;
+    padding-top: 2rem;
+  }
+
+}
+
+.img-barbershop {
+  align-self: center;
+  width: 100%;
+
+}
+
+.img-pokedex {
+  align-self: center;
+  justify-self: center;
+  width: 80%;
+  padding-top: 1rem;
+
+}
+
+@media screen and (min-width: 550px) {
+
+  .projects-container{
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+
+  .card-container {
+    display: grid;
+    grid-column: 2/3;
+  }
+
+  .card {
+    align-self: center;
+    justify-self: center;
+    width: 40rem;
+    height: 59.5rem;
+  }
+
+  .front-card,
+  .back-card {
+    width: 100%;
+  }
+
+  .img-pokedex {
+    align-self: center;
+    justify-self: center;
+    width: 70%;
+    padding-top: 1rem;
+
+  }
+
+}
+
+@media screen and (min-width: 1080px) {
+
+  .card-container {
+    grid-template-columns: 50% 50%;
+  }
+
+}
+
+

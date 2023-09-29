@@ -1,0 +1,31 @@
+<div class="nav-container">
+  <img class="logo" src="../../../assets/JN.png" alt="logo Jhonatan Neira">
+
+  <div class="nav">
+    <button class="nav-button"
+    (click)="navOpen()"
+    cdkOverlayOrigin
+    #navOverlay = "cdkOverlayOrigin">
+      <fa-icon [icon]="faBars"></fa-icon>
+    </button>
+
+  </div>
+
+  <div class="nav-desktop">
+    <a routerLink="home" routerLinkActive="active" class="options">Home </a>
+    <a routerLink="skills" routerLinkActive="active" class="options">Skills</a>
+    <a routerLink="projects" routerLinkActive="active" class="options">Projects</a>
+  </div>
+</div>
+
+<ng-template cdkConnectedOverlay
+[cdkConnectedOverlayOrigin]="navOverlay"
+[cdkConnectedOverlayOpen]="showNav">
+  <div class="options-container">
+    <a class="close" (click)="navOpen()"> X </a>
+    <a routerLink="home" class="options" (click)="navOpen()">Home </a>
+    <a routerLink="skills" class="options" (click)="navOpen()">Skills</a>
+    <a routerLink="projects" class="options" (click)="navOpen()">Projects</a>
+  </div>
+
+</ng-template>

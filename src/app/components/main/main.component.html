@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="card-container" [ngClass]="{'flipped': backFace === true}">
+    <div class="background-card back ">
+      <h1 class="neira">
+        Soy Ingeniero físico de la Universidad Nacional de Colombia, autodidacta y apasionado por este mundo del desarrollo
+        front-end.<br>
+        <br>
+        Me gusta estar siempre investigando sobre nuevas tecnologías para poder aplicar a los proyectos. Por este
+        motivo, estoy abierto al cambio y a la adquisición de nuevos conocimientos.
+      </h1>
+      <a class="home" *ngIf="backFace" (click)="flip()">Back
+      </a>
+    </div>
+
+    <div class="background-card front">
+      <a class="about" *ngIf="!backFace" (click)="flip()">About <span><fa-icon [icon]="faArrowRight"> </fa-icon></span>
+      </a>
+    </div>
+
+    <div class="card">
+      <div class="welcome">
+        <h1 class="hi"> Hola, soy</h1>
+        <h1 class="name"> <span>J</span>honatan <span>N</span>eira</h1>
+        <h1 class="job">Fron-End Developer</h1>
+      </div>
+
+      <div class="socialMedia">
+        <a href="https://github.com/Jhneira" target="_blank">
+          <fa-icon [icon]="github"> </fa-icon>
+        </a>
+        <a href="https://www.instagram.com/jhneira/" target="_blank">
+          <fa-icon [icon]="instagram"> </fa-icon>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
